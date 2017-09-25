@@ -6,12 +6,12 @@ all:
 
 clean:
 	@echo cleaning...
-	rm -f ${F}.o
+	rm -f ./${F}.o
 
 build: clean
 	@echo building ${F}...
-	gcc ${F}.c -o ${F}.o
+	gcc ./${F}.c -o ./${F}.o
 
-run:
+run: build
 	@echo running...
 	./${F}.o
