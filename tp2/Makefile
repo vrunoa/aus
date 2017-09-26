@@ -8,6 +8,10 @@ clean:
 	@echo cleaning...
 	rm -f ./${F}.o
 
+clean-all:
+	@echo cleaning all files...
+	rm -f ./*.o
+
 build: clean
 	@echo building ${F}...
 	gcc ./${F}.c -o ./${F}.o
