@@ -30,5 +30,6 @@ int main() {
   char* r = malloc(len*sizeof(char));
   reverse(len, phrase, r);
   printf("Alvere%s", r);
+  free(r);
   return 0;
 }
