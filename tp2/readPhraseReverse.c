@@ -15,11 +15,14 @@ int getLen(char* p) {
   return i-1;
 }
 
-void reverse(int len, char* p, char* r) {
+void reverse(int len, char* p) {
   int pos = len-1;
-  for(int i=0;i<len;i++) {
-    r[pos] = p[i];
-    pos--;
+  char aux;
+  for(int i=0;i<(len/2);i++) {
+    aux = p[i];
+    p[i] = p[pos];
+    p[pos] = aux;
+    --pos;
   }
 }
 
@@ -27,9 +30,7 @@ int main() {
   char phrase[100];
   readPhrase(phrase);
   int len = getLen(phrase);
-  char* r = malloc(len*sizeof(char));
-  reverse(len, phrase, r);
-  printf("Alvere%s", r);
-  free(r);
+  reverse(len, phrase);
+  printf("Alvere\n%s", phrase);
   return 0;
 }
