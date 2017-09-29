@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "fibonacci-method.h"
 
 int fibonacci(int n){
   if (n <= 2) {
